@@ -1,0 +1,15 @@
+{
+  "name": "room-homepage-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)",
+  "main": "src/code/index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss/main.scss src/css/main.css"
+  },
+  "keywords": [],
+  "author": "Candela Bramucci <candelabramucci05@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.49.0"
+  }
+}
