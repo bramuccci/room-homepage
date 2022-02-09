@@ -2,9 +2,20 @@
     font-size: 12px;
 }
 
+.stack {
+    > * + * {
+        margin-block-start: 1.6rem;
+    }
+
+    &--small {
+        > * + * {
+            margin-block-start: 1rem;
+        }
+    }
+}
+
 img {
     max-width: 100%;
-    display: block;
 }
 
 h1,
@@ -13,6 +24,15 @@ p,
 li,
 ul,
 a {
+    padding: 0;
     margin: 0;
     text-decoration: none;
+    list-style-type: none;
+}
+
+main {
+    > img {
+        display: block;
+        width: 100%;
+    }
 }

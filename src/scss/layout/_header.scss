@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+
+.main-header {
+    .hero {
+        background: url(../images/mobile-image-hero-1.jpg) no-repeat top / cover;
+        padding: 4em 2em;
+        height: 70vw;
+        position: relative;
+
+        @include for-phone-only {
+            .logo {
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                left: 0;
+            }
+        }
+
+        .btns-selector {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: $black; //makes sure that there isn't a small line due the background
+        }
+    }
+}

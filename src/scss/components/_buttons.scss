@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.btn {
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    &--carousel {
+        align-items: center;
+        background: $black;
+        display: inline-flex;
+        padding: 1em;
+        height: 4.5em;
+        justify-content: center;
+        width: 4.5em;
+    }
+}

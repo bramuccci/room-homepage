@@ -1,0 +1,12 @@
+.section {
+    padding: 5em 2.25em;
+
+    &--small {
+        padding: 4em 2.25em;
+    }
+
+    .shop-now {
+        display: inline-block;
+        margin-top: 5em;
+    }
+}
