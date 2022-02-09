@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+#main {
+    @include for-tablet-landscape-up {
+        display: grid;
+        grid-template-columns: auto 49rem auto;
+
+        > img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

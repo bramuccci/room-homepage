@@ -10,9 +10,21 @@
     .shop-now {
         display: inline-block;
         margin-top: 5rem;
+
+        @include for-tablet-landscape-up {
+            margin-top: 2rem;
+        }
     }
 
     @include for-tablet-portrait-up {
         padding: 6em 4em;
+    }
+
+    @include for-tablet-landscape-up {
+        padding: 9em 7em;
+
+        &--small {
+            padding: 5em 4em;
+        }
     }
 }

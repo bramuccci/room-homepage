@@ -30,4 +30,18 @@
             height: 55vw;
         }
     }
+
+    @include for-tablet-landscape-up {
+        display: grid;
+        grid-template-columns: 60% auto;
+
+        .hero {
+            height: auto;
+            background: url(../images/desktop-image-hero-1.jpg) no-repeat top
+                left / cover;
+            .btns-selector {
+                transform: translate(100%, 0%);
+            }
+        }
+    }
 }
