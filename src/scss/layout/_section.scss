@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 .section {
     padding: 5em 2.25em;
 
@@ -7,6 +9,10 @@
 
     .shop-now {
         display: inline-block;
-        margin-top: 5em;
+        margin-top: 5rem;
+    }
+
+    @include for-tablet-portrait-up {
+        padding: 6em 4em;
     }
 }

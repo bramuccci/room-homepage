@@ -7,11 +7,15 @@
 
     &--carousel {
         align-items: center;
+        aspect-ratio: 1;
         background: $black;
         display: inline-flex;
         padding: 1em;
-        height: 4.5em;
         justify-content: center;
         width: 4.5em;
+
+        @include for-tablet-portrait-up {
+            width: 6em;
+        }
     }
 }
