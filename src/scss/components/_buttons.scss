@@ -13,10 +13,26 @@
         display: inline-flex;
         padding: 1em;
         justify-content: center;
+        transition: transform 250ms ease-in-out;
         width: 4.5em;
 
         @include for-tablet-portrait-up {
             width: 6em;
+        }
+
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+            transform-origin: bottom left;
+        }
+
+        &:focus {
+            outline: 0.5em solid hsla(0, 0%, 0%, 0.5);
+        }
+
+        &:active {
+            outline: 0.5em solid hsla(0, 0%, 100%, 0.9);
+            transform: scale(0.95);
         }
     }
 }

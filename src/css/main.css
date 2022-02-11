@@ -422,12 +422,24 @@ p {
   display: inline-flex;
   padding: 1em;
   justify-content: center;
+  transition: transform 250ms ease-in-out;
   width: 4.5em;
 }
 @media (min-width: 600px) {
   .btn--carousel {
     width: 6em;
   }
+}
+.btn--carousel:hover, .btn--carousel:focus {
+  transform: scale(1.1);
+  transform-origin: bottom left;
+}
+.btn--carousel:focus {
+  outline: 0.5em solid rgba(0, 0, 0, 0.5);
+}
+.btn--carousel:active {
+  outline: 0.5em solid rgba(255, 255, 255, 0.9);
+  transform: scale(0.95);
 }
 
 .carousel > * {
@@ -472,7 +484,7 @@ p {
   }
   .main-header .hero {
     height: auto;
-    background: url(../images/desktop-image-hero-1.jpg) no-repeat top/cover;
+    background: url(../images/desktop-image-hero-1.jpg) no-repeat top left/cover;
   }
   .main-header .hero .btns-selector {
     transform: translate(100%, 0%);
