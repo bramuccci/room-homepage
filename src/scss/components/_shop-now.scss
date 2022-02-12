@@ -1,0 +1,15 @@
+.shop-now {
+    display: inline-block;
+    line-height: 1;
+
+    &:hover {
+        img {
+            transition: transform 250ms ease-in-out;
+            transform: translateX(100%);
+        }
+    }
+
+    &:focus {
+        outline: 0.5em solid hsla(0, 0%, 0%, 0.5);
+    }
+}

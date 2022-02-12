@@ -450,6 +450,18 @@ p {
   display: block;
 }
 
+.shop-now {
+  display: inline-block;
+  line-height: 1;
+}
+.shop-now:hover img {
+  transition: transform 250ms ease-in-out;
+  transform: translateX(100%);
+}
+.shop-now:focus {
+  outline: 0.5em solid rgba(0, 0, 0, 0.5);
+}
+
 .main-header .hero {
   background: url(../images/mobile-image-hero-1.jpg) no-repeat top/cover;
   padding: 4em 2em;
@@ -498,7 +510,6 @@ p {
   padding: 4em 2.25em;
 }
 .section .shop-now {
-  display: inline-block;
   margin-top: 5rem;
 }
 @media (min-width: 900px) {
