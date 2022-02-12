@@ -28,15 +28,26 @@
         <header class="main-header">
             <div class="hero">
                 <img src="src/images/logo.svg" alt="room logo" class="logo" />
-                <nav class="nav">
-                    <!-- <ul>
+
+                <!-- <img src="src/images/icon-hamburger.svg" alt="" srcset="" /> -->
+                <button
+                    class="mobile-nav-toggle btn"
+                    aria-controls="primary-nav"
+                    aria-expanded="false"
+                >
+                    <span class="hamburger"></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+
+                <nav>
+                    <ul id="primary-nav" data-visible="false">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Shop</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
-                    </ul> -->
-                    <img src="src/images/icon-hamburger.svg" alt="" srcset="" />
+                    </ul>
                 </nav>
+
                 <div class="btns-selector">
                     <button class="btn btn--carousel btn--carousel-left">
                         <img
@@ -154,5 +165,6 @@
                 >Frontend Mentor</a
             >. Coded by <a href="#">Your Name Here</a>.
         </footer>
+        <script src="src/code/index.js"></script>
     </body>
 </html>

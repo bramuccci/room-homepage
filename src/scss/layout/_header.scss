@@ -1,6 +1,10 @@
 @use '../abstracts/' as *;
 
 .main-header {
+    *:focus-visible {
+        outline: $outline;
+    }
+
     .hero {
         background: url(../images/mobile-image-hero-1.jpg) no-repeat top / cover;
         padding: 4em 2em;

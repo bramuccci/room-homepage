@@ -2,6 +2,10 @@
     font-size: 12px;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .stack {
     > * + * {
         margin-block-start: 1.6rem;
@@ -35,4 +39,14 @@ main {
         display: block;
         width: 100%;
     }
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }

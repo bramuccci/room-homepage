@@ -27,7 +27,7 @@
         }
 
         &:focus {
-            outline: 0.5em solid hsla(0, 0%, 0%, 0.5);
+            outline: $outline;
         }
 
         &:active {

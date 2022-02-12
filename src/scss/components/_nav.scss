@@ -1,0 +1,109 @@
+@use '../abstracts/' as *;
+
+nav {
+    display: inline;
+}
+
+#primary-nav {
+    z-index: 1000;
+
+    li a {
+        color: $white;
+        font-weight: 600;
+        text-transform: lowercase;
+    }
+
+    @include for-phone-only {
+        background: $white;
+        display: flex;
+        gap: 2em;
+        inset: 0 0 auto 0;
+        justify-content: end;
+        padding: 4em 2em;
+        position: absolute;
+        transition: transform 350ms ease-in-out;
+        transform: translateY(-100%);
+
+        &[data-visible='true'] {
+            transform: translateY(0%);
+        }
+
+        * {
+            line-height: 1;
+        }
+
+        li a {
+            color: $black;
+        }
+    }
+
+    @include for-tablet-portrait-up {
+        display: inline-flex;
+        gap: 3em;
+        margin-left: 3em;
+        transform: translateY(-0.3em);
+
+        li a:hover {
+            border-bottom: 0.5em solid hsla(0, 0%, 0%, 0.15);
+        }
+    }
+}
+
+// menu
+
+.mobile-nav-toggle {
+    align-items: center;
+    aspect-ratio: 1;
+    background: #0000;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 3.5rem;
+    width: 2rem;
+    z-index: 9999;
+
+    .hamburger {
+        background-color: $white;
+        border-radius: 0.5rem;
+        height: 10%;
+        position: sticky;
+        transition: all 350ms ease-in-out;
+        width: 100%;
+
+        &::before,
+        &::after {
+            content: '';
+            background-color: inherit;
+            border-radius: inherit;
+            position: absolute;
+            width: inherit;
+            height: 100%;
+            inset: 0;
+        }
+
+        &::before {
+            transform: translateY(-0.65rem);
+        }
+
+        &::after {
+            transform: translateY(0.65rem);
+        }
+
+        &.open {
+            background-color: $gray;
+            transform: rotate(135deg);
+
+            &::before {
+                background: transparent;
+            }
+
+            &::after {
+                transform: rotate(90deg) translateY(0);
+            }
+        }
+    }
+
+    @include for-tablet-portrait-up {
+        display: none;
+    }
+}
