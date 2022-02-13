@@ -420,7 +420,30 @@ p {
 }
 
 .attribution {
-  background-color: red;
+  color: #a1a1a1;
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.75;
+}
+@media (min-width: 600px) {
+  .attribution {
+    margin-top: -2rem;
+  }
+}
+.attribution a {
+  color: #454545;
+  display: inline-block;
+  transition: transform 250ms ease-out;
+}
+.attribution a:hover {
+  border-bottom: 0.5em solid rgba(0, 0, 0, 0.25);
+}
+.attribution a:focus-visible {
+  outline: 0.5em solid rgba(0, 0, 0, 0.5);
+}
+.attribution a:active {
+  transform: scale(1.1);
+  transform-origin: bottom left;
 }
 
 .btn {

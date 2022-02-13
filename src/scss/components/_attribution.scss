@@ -1,3 +1,32 @@
+@use '../abstracts/' as *;
+
 .attribution {
-    background-color: red;
+    // background-color: hsla(0, 0%, 0%, 0.1);
+    color: $gray;
+    text-align: center;
+    font-weight: 700;
+    opacity: 0.75;
+
+    @include for-tablet-portrait-up {
+        margin-top: -2rem;
+    }
+
+    a {
+        color: $dark-gray;
+        display: inline-block;
+        transition: transform 250ms ease-out;
+
+        &:hover {
+            border-bottom: 0.5em solid hsla(0, 0%, 0%, 0.25);
+        }
+
+        &:focus-visible {
+            outline: $outline;
+        }
+
+        &:active {
+            transform: scale(1.1);
+            transform-origin: bottom left;
+        }
+    }
 }
