@@ -488,14 +488,6 @@ p {
   transform: scale(0.95);
 }
 
-.carousel > * {
-  display: none;
-  width: 100vw;
-}
-.carousel > *:first-child {
-  display: block;
-}
-
 nav {
   display: inline;
 }
