@@ -6,10 +6,22 @@
     }
 
     .hero {
-        background: url(../images/mobile-image-hero-1.jpg) no-repeat top / cover;
+        background: no-repeat top / cover;
         padding: 4em 2em;
         position: relative;
         height: 70vw;
+
+        &[data-carousel-index='1'] {
+            background-image: url(../images/mobile-image-hero-1.jpg);
+        }
+
+        &[data-carousel-index='2'] {
+            background-image: url(../images/mobile-image-hero-2.jpg);
+        }
+
+        &[data-carousel-index='3'] {
+            background-image: url(../images/mobile-image-hero-3.jpg);
+        }
 
         .btns-selector {
             position: absolute;
@@ -28,8 +40,17 @@
         }
 
         @include for-tablet-portrait-up {
-            background: url(../images/desktop-image-hero-1.jpg) no-repeat top /
-                cover;
+            &[data-carousel-index='1'] {
+                background-image: url(../images/desktop-image-hero-1.jpg);
+            }
+
+            &[data-carousel-index='2'] {
+                background-image: url(../images/desktop-image-hero-2.jpg);
+            }
+
+            &[data-carousel-index='3'] {
+                background-image: url(../images/desktop-image-hero-3.jpg);
+            }
             padding: 5em 4em;
             height: 55vw;
         }
@@ -41,8 +62,8 @@
 
         .hero {
             height: auto;
-            background: url(../images/desktop-image-hero-1.jpg) no-repeat top
-                left / cover;
+            background-position: top left;
+
             .btns-selector {
                 transform: translate(100%, 0%);
             }

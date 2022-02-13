@@ -23,10 +23,12 @@
             href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
             rel="stylesheet"
         />
+
+        <script src="src/code/index.js" defer></script>
     </head>
     <body>
         <header class="main-header">
-            <div class="hero">
+            <div class="hero hero--1" data-carousel-index="1">
                 <img src="src/images/logo.svg" alt="room logo" class="logo" />
 
                 <!-- <img src="src/images/icon-hamburger.svg" alt="" srcset="" /> -->
@@ -49,12 +51,12 @@
                 </nav>
 
                 <div class="btns-selector">
-                    <button class="btn btn--carousel btn--carousel-left">
+                    <button class="btn btn--carousel" data-carousel-btn="prev">
                         <img
                             src="src/images/icon-angle-left.svg"
                             alt="change hero image to the left"
                         /></button
-                    ><button class="btn btn--carousel btn--carousel-right">
+                    ><button class="btn btn--carousel" data-carousel-btn="next">
                         <img
                             src="src/images/icon-angle-right.svg"
                             alt="change hero image to the right"
@@ -140,21 +142,6 @@
                     <img src="src/images/icon-arrow.svg" alt="shop arrow"
                 /></a>
             </div>
-
-            <div class="carousel carousel--image">
-                <img
-                    src="src/images/mobile-image-hero-1.jpg"
-                    alt="hero background 1"
-                />
-                <img
-                    src="src/images/mobile-image-hero-2.jpg"
-                    alt="hero background 2"
-                />
-                <img
-                    src="src/images/mobile-image-hero-3.jpg"
-                    alt="hero background 3"
-                />
-            </div>
         </template>
 
         <footer class="attribution">
@@ -165,6 +152,5 @@
                 >Frontend Mentor</a
             >. Coded by <a href="#">Your Name Here</a>.
         </footer>
-        <script src="src/code/index.js"></script>
     </body>
 </html>
